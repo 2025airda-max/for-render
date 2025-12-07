@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+body {
+    font-family: 'Share Tech Mono', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #0d0221;
+    color: #00f6ff;
+    text-shadow: 0 0 5px rgba(0, 246, 255, 0.5);
+}
+
+.container {
+    background-color: rgba(13, 2, 33, 0.8);
+    border: 1px solid #ff00ff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px #ff00ff, 0 0 25px #ff00ff inset;
+    width: 90%;
+    max-width: 700px;
+    padding: 20px;
+    box-sizing: border-box;
+    backdrop-filter: blur(5px);
+}
+
+h1 {
+    text-align: center;
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff, 0 0 15px #ff00ff;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.chat-window {
+    border: 1px solid #00f6ff;
+    box-shadow: 0 0 10px #00f6ff;
+    border-radius: 5px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#chat-messages {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid #00f6ff;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.chat-input {
+    display: flex;
+    padding: 10px;
+    background-color: transparent;
+}
+
+#user-input {
+    flex-grow: 1;
+    padding: 12px;
+    border: 1px solid #00f6ff;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #00f6ff;
+    text-shadow: 0 0 5px rgba(0, 246, 255, 0.5);
+}
+
+#user-input::placeholder {
+    color: rgba(0, 246, 255, 0.5);
+}
+
+#send-button {
+    background-color: transparent;
+    color: #ff00ff;
+    border: 1px solid #ff00ff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 0 10px #ff00ff;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#send-button:hover {
+    background-color: #ff00ff;
+    color: #0d0221;
+    box-shadow: 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+}
+
+.message {
+    padding: 10px 15px;
+    border-radius: 15px;
+    max-width: 85%;
+    word-wrap: break-word;
+    line-height: 1.4;
+    border: 1px solid;
+    box-shadow: 0 0 5px;
+}
+
+.message.user {
+    background-color: rgba(0, 246, 255, 0.1);
+    color: #00f6ff;
+    border-color: #00f6ff;
+    box-shadow: 0 0 5px #00f6ff;
+    align-self: flex-end;
+    margin-left: auto;
+}
+
+.message.ai {
+    background-color: rgba(255, 0, 255, 0.1);
+    color: #ff00ff;
+    border-color: #ff00ff;
+    box-shadow: 0 0 5px #ff00ff;
+    align-self: flex-start;
+    margin-right: auto;
+}
+
+#record-button {
+    background-color: transparent;
+    color: #00f6ff; /* Cyan color to match user input border */
+    border: 1px solid #00f6ff;
+    border-radius: 5px;
+    padding: 10px 15px; /* A bit wider for the icon */
+    cursor: pointer;
+    font-size: 20px; /* Make the icon a bit bigger */
+    margin-left: 10px;
+    box-shadow: 0 0 10px #00f6ff;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#record-button:hover {
+    background-color: #00f6ff;
+    color: #0d0221;
+    box-shadow: 0 0 20px #00f6ff, 0 0 30px #ff00ff;
+}
+
+#record-button.recording {
+    background-color: #ff0000; /* Red for recording */
+    color: #ffffff;
+    border-color: #ff0000;
+    box-shadow: 0 0 15px #ff0000, 0 0 25px #ff0000;
+}
