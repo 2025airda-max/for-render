@@ -68,15 +68,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
         addMessageToChat(message, 'user');
         userInput.value = ''; // Clear input
+const response = await fetch('/api/yandex', {
 
         try {
             // FIX: The backend expects 'message', not 'prompt'
-            const response = await fetch('/api/chat', {
+            const response = await fetch('/api/yandex', {
+
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ message: message }),
+               body: JSON.stringify({ prompt: message }),
+
+
             });
 
             if (!response.ok) {
